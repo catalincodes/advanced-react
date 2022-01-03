@@ -7,27 +7,37 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --exec babel-node lib/server.js",
-    "lint:watch": "esw --watch --clear"
+    "lint:watch": "esw --watch --clear",
+    "webpack": "webpack -wd 'source-map'"
   },
   "babel": {
     "presets": [
-      "react",
-      "env",
-      "stage-2"
+      "@babel/react",
+      "@babel/preset-env"
+    ],
+    "plugins" : [
+      ["@babel/transform-runtime"]
     ]
   },
   "devDependencies": {
     "@babel/core": "7.11.0",
     "@babel/eslint-parser": "^7.16.5",
     "eslint": "^8.5.0",
-    "eslint-plugin-react": "^7.28.0"
+    "eslint-plugin-react": "^7.28.0",
+    "webpack-cli": "^4.9.1"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
+    "@babel/cli": "^7.16.0",
+    "@babel/node": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.7",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "@babel/runtime": "^7.16.7",
+    "babel-loader": "^8.2.3",
     "ejs": "^3.1.6",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.65.0"
   }
 }
