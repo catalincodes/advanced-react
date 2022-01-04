@@ -8,22 +8,26 @@
   "scripts": {
     "dev": "nodemon --exec babel-node lib/server.js",
     "lint:watch": "esw --watch --clear",
-    "webpack": "webpack -wd 'source-map'"
+    "webpack": "webpack -wd 'source-map'",
+    "test": "jest --watch"
   },
   "babel": {
     "presets": [
       "@babel/react",
       "@babel/preset-env"
     ],
-    "plugins" : [
-      ["@babel/transform-runtime"]
+    "plugins": [
+      [
+        "@babel/transform-runtime"
+      ]
     ]
   },
   "devDependencies": {
-    "@babel/core": "7.11.0",
+    "@babel/core": "7.13.0",
     "@babel/eslint-parser": "^7.16.5",
-    "eslint": "^8.5.0",
+    "eslint": "^8.6.0",
     "eslint-plugin-react": "^7.28.0",
+    "jest": "^27.4.5",
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
