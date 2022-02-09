@@ -6,7 +6,7 @@
   "author": "Catalin Popescu",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec babel-node lib/server.js",
+    "dev": "NODE_PATH=./lib nodemon --exec babel-node lib/server.js",
     "lint:watch": "esw --watch --clear",
     "webpack": "webpack -wd 'source-map'",
     "test": "jest --watch"
